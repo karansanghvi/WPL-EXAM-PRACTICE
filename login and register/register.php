@@ -12,13 +12,21 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
 
+    $sql = "INSERT INTO login (username, email, password, confirm_password) VALUES ($username, $email, $password, $confirm_password)";
+
+    if ($conn->query($sql) === TRUE) {
+        //echo "New record created successfully";
+      } else {
+        //echo "Error: " . $sql . "<br>" . $conn->error;
+      }
+
+
     if($password !== $confirm_password){
         echo "Passwords do not match";
     }
     else {
         echo "registered successfully!!";
     }
-    // Save user data to database or do further processing
 }
 ?>
 <html>
