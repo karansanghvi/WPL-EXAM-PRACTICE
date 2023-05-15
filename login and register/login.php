@@ -17,14 +17,4 @@ if ($result->num_rows > 0) {
   } else {
     echo "logged in!!";
   }
-
-// if($_SERVER['REQUEST_METHOD'] == 'POST'){
-//     $username = $_POST['username'];
-//     $password = $_POST['password'];
-//     if($authentication_failed){
-//         echo "Invalid username or password";
-//     } else {
-//         echo "Logged In Successfully!!";
-//     }
-// }
 ?>
