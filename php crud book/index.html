@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Library Management System</h1>
+    <hr>
+    <h1>Add Book</h1>
+    <form action="add_book.php" method="POST">
+        <label for="Book Name">Book Name:</label>
+        <input type="text" name="book_name" id="book_name">
+        <br> <br>
+        <label for="Author Name">Author Name:</label>
+        <input type="text" name="author_name" id="author_name">
+        <br> <br>
+        <label for="Price">Price:</label>
+        <input type="text" name="price" id="price">
+        <br> <br>
+        <label for="Quantity">Quantity:</label>
+        <input type="text" name="quantity" id="quantity">
+        <br> <br>
+        <button type="submit">Add Book</button>
+    </form>
+
+    <hr>
+
+    <h1>Search Book</h1>
+    <form action="search_book.php" method="POST">
+        <label for="author">Author Name:</label>
+        <input type="text" name="author_name" id="author_name">
+        <br> <br>
+        <button type="submit">Search Book</button>
+    </form>
+</body>
+</html>

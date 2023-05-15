@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train Booking</title>
+	<script type="text/javascript">
+		// Define an object to store session data
+		var sessionData = {};
+
+		// Function to start a new session
+		function startSession(userId) {
+			sessionData.userId = userId;
+			sessionData.loggedIn = true;
+		}
+
+		// Function to end the current session
+		function endSession() {
+			sessionData.userId = null;
+			sessionData.loggedIn = false;
+		}
+
+		// Function to search for available trains
+		function searchTrains() {
+			// Get the origin and destination inputs
+			var origin = document.getElementById("origin").value;
+			var destination = document.getElementById("destination").value;
+
+			// TODO: Use the origin and destination inputs to search for available trains
+
+			// Display the search results
+			document.getElementById("searchResults").innerHTML = "TODO: Display search results here";
+		}
+	</script>
+</head>
+<body>
+	<h1>Train Booking</h1>
+
+	<!-- User login form -->
+	<form>
+		<label for="userId">User ID:</label>
+		<input type="text" id="userId" name="userId">
+		<button type="button" onclick="startSession(document.getElementById('userId').value)">Log in</button>
+	</form>
+
+	<!-- Search form -->
+	<form>
+		<label for="origin">Origin:</label>
+		<input type="text" id="origin" name="origin">
+		<label for="destination">Destination:</label>
+		<input type="text" id="destination" name="destination">
+		<button type="button" onclick="searchTrains()">Search</button>
+	</form>
+
+	<!-- Search results -->
+	<div id="searchResults"></div>
+
+	<!-- User logout button -->
+	<button type="button" onclick="endSession()">Log out</button>
+</body>
+</html>

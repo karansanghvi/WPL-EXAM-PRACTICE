@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+</head>
+<body>
+    <h1 id="product-name">Stylish T-shirt</h1>
+    <p id="product-price">Price: $300</p>
+    <p>Select Size:</p>
+    <input type="radio" name="S" id="S">
+    <label for="small">Small (S)</label>
+    <br>
+    <input type="radio" name="M" id="M">
+    <label for="medium">Medium (M)</label>
+    <br>
+    <input type="radio" name="L" id="L">
+    <label for="large">Large (L)</label>
+    <br>
+    <input type="radio" name="XL" id="XL">
+    <label for="extralarge">Extra Large (XL)</label>
+    <br>
+    <input type="radio" name="XXL" id="XXL">
+    <label for="doublextralarge">Double Extra Large (XXL)</label>
+    <br>
+    <input type="button" value="submit" onclick="addToCart()">
+
+    <script>
+        function addToCart()
+        {
+            var productTitle = document.getElementById('product-name').textContent;
+            var productPrice = document.getElementById('product-price').textContent;
+            var selectedSize = checkRadio();
+
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            var cartItem = {
+                selectedSize: selectedSize,
+                productTitle: productTitle,
+                productPrice: productPrice
+            };
+
+            cartItems.push(cartItem);
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            window.location.href = "cart.html";
+        }
+
+        function checkRadio()
+        {
+            var a;
+            let radio1 = document.getElementById('S');
+            let radio2 = document.getElementById('M');
+            let radio3 = document.getElementById('L');
+            let radio4 = document.getElementById('XL');
+
+            if(radio1.checked)
+            {
+                a = "S";
+            }
+            else if(radio2.checked)
+            {
+                a = "M";
+            }
+            else if(radio3.checked)
+            {
+                a = "L";
+            }
+            else if(radio4.checked)
+            {
+                a = "XL";
+            }
+            else {
+                a = "XXL";
+            }
+            return a;
+        }
+    </script>
+</body>
+</html>
