@@ -1,0 +1,33 @@
+    /* Table */
+    #products {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    /* Table Head */
+    #products thead {
+        background-color: greenyellow;
+    }
+    
+    #products thead td {
+        font-weight: bold;
+    }
+    
+    /* Table Cells */
+    #products td {
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+    
+    /* Remove Cell */
+    #products .remove {
+        text-align: center;
+        font-weight: bold;
+        color: black;
+    }
+
+    #button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
