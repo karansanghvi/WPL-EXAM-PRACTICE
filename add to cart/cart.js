@@ -22,7 +22,7 @@ var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
                 localStorage.setItem('cartItems', JSON.stringify(cartItems));
                 tableRow.remove();
             });
-            tableRemoveCell.appendChild(removeButton);
+            tableRemoveCell.appendChild(removeButton);  
             tableRow.appendChild(tableRemoveCell);
             totalPrice += parseFloat(cartItem.productPrice);
 
