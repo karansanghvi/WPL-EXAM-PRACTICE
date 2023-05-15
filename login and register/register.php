@@ -14,11 +14,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $sql = "INSERT INTO login (username, email, password, confirm_password) VALUES ($username, $email, $password, $confirm_password)";
 
-    if ($conn->query($sql) === TRUE) {
-        //echo "New record created successfully";
-      } else {
-        //echo "Error: " . $sql . "<br>" . $conn->error;
-      }
+    $result = $conn->query($sql);
 
 
     if($password !== $confirm_password){
