@@ -5,28 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
     <h1>Cart Page</h1>
-    <table width="100%">
+    <table width="100%" id="products">
         <thead>
             <tr>
                 <td>Product</td>
                 <td>Price</td>
                 <td>Size</td>
-                <td>Remove</td>
+                <td class="remove" id="button">Remove</td>
             </tr>
         </thead>
         <tbody id="cart-table-body"></tbody>
-    </table>
-
-    <h1>Total Price:</h1>
-    <table width="100%">
-        <tr>
-            <td>Total</td>
-            <td id="total"></td>
-        </tr>
     </table>
     <script src="cart.js"></script>
 </body>
