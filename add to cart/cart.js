@@ -1,7 +1,4 @@
 var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-
-        var totalPrice = 0;
-
         cartItems.forEach(function(cartItem, index) {
             var tableRow = document.createElement('tr');
 
@@ -31,4 +28,3 @@ var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
             document.getElementById('cart-table-body').appendChild(tableRow);
         });
-        document.getElementById('total').textContent = '$' + totalPrice.toFixed(2);
